@@ -1,0 +1,1312 @@
+
+
+/** 页面最小宽度 **/
+@minWidth: 1200px;
+
+
+/** 导航高度 **/
+@navHeight: 80px;
+@twoNavHeight: 50px;
+@twoNavZindex: 999;
+
+/** 底部版权高度 **/
+@footerHeight: 50px;
+
+.box-shadow(@a,@b,@c,@color) {
+    -webkit-box-shadow: @a @b @c @color;
+    -moz-box-shadow: @a @b @c @color;
+    -ms-box-shadow: @a @b @c @color;
+    -o-box-shadow: @a @b @c @color;
+    box-shadow: @a @b @c @color;
+}
+
+.transition(@css,@time,@linear) {
+    -webkit-transition: @css @time @linear;
+    -moz-transition: @css @time @linear;
+    -ms-transition: @css @time @linear;
+    -o-transition: @css @time @linear;
+    transition: @css @time @linear;
+}
+
+.rotate(@deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+.absoluteCenter() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.absolute(@x,@y,@w,@h) {
+    position: absolute;
+    left: @x;
+    top: @y;
+    width: @w;
+    height: @h;
+}
+
+.content-1200 {
+    width: @minWidth;
+    margin: 0 auto;
+    /*border: 1px solid #ccc;*/
+}
+
+.minWidth-1200 {
+    min-width: @minWidth;
+}
+
+.clear-both {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+//header 导航部分
+.header {
+    width: 100%;
+    height: @navHeight;
+    border-bottom: 1px solid #fff;
+    background: #FFF;
+    .box-shadow( 0,2px,10px,#ccc);
+    //导航容器，默认宽度100% 最小宽1200px可以调节 水平居中
+    .nav-container {
+        width: 100%;
+        min-width: @minWidth;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+}
+
+.nav-container {
+    //设置整体文字大小
+    font-size: 14px;
+    //logo 随着容器高度始终垂直居中
+    .logo {
+        float: left;
+        height: 100%;
+        margin-left: 20px;
+        //span 是为了应用vertical-align: middle属性使图片垂直居中
+        span {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        img {
+            height: 80%;
+            vertical-align: middle;
+        }
+    }
+    //nav 导航随着容器高度始终居中
+    .nav {
+        float: right;
+        margin-right: 60px;
+
+        ul {
+            li {
+                float: left;
+                height: @navHeight;
+
+                a {
+                    display: inline-block;
+                    height: 100%;
+                    padding: 0 20px;
+                    line-height: @navHeight;
+                    // font-weight: 500;
+                }
+            }
+        }
+    }
+    //语言切换
+    .language {
+        float: right;
+        margin-right: 30px;
+        display: inline-block;
+        height: (@navHeight/4);
+        width: @navHeight/2;
+        border-left: 1px solid #000;
+        text-align: center;
+        line-height: @navHeight/4;
+        margin-top: @navHeight/2.6;
+
+        span {
+            position: relative;
+            display: inline-block;
+
+            &:after {
+                content: "";
+                display: block;
+                border-left: 5px solid transparent;
+                border-top: 5px solid #000;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid transparent;
+                .absolute(130%,@navHeight/9,auto,auto);
+            }
+        }
+    }
+    //定义导航选中class 类名
+    .nav-active {
+        border-bottom: 3px solid #ffba00;
+
+        > a {
+            color: #ffba00;
+        }
+    }
+
+    .two-nav-active {
+        color: #ffba00;
+    }
+    //二级导航容器
+    .two-nav-container {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #f6f6f6;
+        overflow: hidden;
+        z-index: -1;
+        .transition( all, 0.3s, linear );
+        // text-align: right;
+        .body {
+            display: inline-block;
+
+            a {
+                line-height: @twoNavHeight;
+            }
+        }
+    }
+    //调节body水平位置
+    .nav-bar2 {
+        .body {
+            position: absolute;
+            right: 7.2%;
+        }
+    }
+
+    .nav-bar3 {
+        .body {
+            position: absolute;
+            right: 15%;
+        }
+    }
+
+    .nav-bar4 {
+        .body {
+            position: absolute;
+            right: 10%;
+        }
+    }
+}
+
+
+
+
+/** 首页**/
+
+.home-main {
+    .absoluteCenter();
+    top: @navHeight;
+    text-align: center;
+    z-index: -2;
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    //.swiper-slide {
+    //    text-align: center;
+    //    font-size: 18px;
+    //    background: url("../img/banner2.jpg") no-repeat;
+    //    background-size: cover;
+    //    background-position: center center;
+    //}
+    .a{
+        text-align: center;
+        font-size: 18px;
+        background: url("../img/banner2.jpg") no-repeat;
+        background-size: 110%;
+        background-position: 5% center;
+    }
+    .b{
+        text-align: center;
+        font-size: 18px;
+        background: url("../img/banner1.jpg") no-repeat;
+        background-size: 110%;
+        background-position: 5% center;
+    }
+    .c{
+        text-align: center;
+        font-size: 18px;
+        background: url("../img/banner3.png") no-repeat;
+        background-size: 100%;
+        background-position: center center;
+    }
+    .home-1{
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+        //bottom: 0;
+        margin: auto;
+        width: 660px;
+        height: 100px;
+        z-index: 66;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+}
+
+/** 关于巨牛 ---> 公司介绍**/
+
+.brief-main {
+    .absolute(0,@navHeight,100%,auto);
+    background: url("../img/bg-introduce1.jpg") no-repeat;
+    text-align: center;
+    background-size: cover;
+    /*height:1500px;*/
+    /*position:relative;*/
+    padding-bottom: @footerHeight;
+    z-index: -2;
+    min-height: 1080-@navHeight;
+
+    .content {
+
+        h3 {
+            font-size: 22px;
+            color: #FFF;
+            margin-top: 92px;
+            margin-bottom: 40px;
+        }
+
+        .js {
+            color: #f1f2f4;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 40px;
+            width: 800px;
+            margin: 0 auto;
+
+            p {
+                text-align: left;
+                margin-bottom: 30px;
+                text-indent: 30px;
+                line-height: 30px;
+                word-spacing: 8px;
+                letter-spacing: 2px;
+            }
+        }
+
+        .jg {
+            padding-bottom: 40px;
+
+            img {
+                width: 700px;
+            }
+        }
+    }
+}
+
+/** 关于巨牛 ---> 团队介绍**/
+.team-main {
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1080-@navHeight;
+    background: url("../img/bg-team.jpg") no-repeat;
+    padding-bottom: @footerHeight;
+    background-size: cover;
+    z-index: -2;
+
+    .content {
+        margin-top: @twoNavHeight+10px;
+
+        .box {
+            width: 496px*2;
+            margin: 0 auto;
+            position: relative;
+
+            ul {
+                li {
+                    margin-bottom: 60px;
+                    text-align: center;
+                    float: left;
+
+                    > div {
+                        display: inline-block;
+                        width: 426px;
+                        height: 252px;
+                        overflow: hidden;
+                        margin: 0 30px;
+
+                        img {
+                            width: 212px;
+                            height: 100%;
+                            float: left;
+                        }
+
+                        div {
+                            background: #FFF;
+                            padding: 20px 25px 10px 25px;
+                            margin: 0 auto;
+                            margin-left: 212px;
+                            height: 100%;
+
+                            .t1 {
+                                font-size: 20px;
+                            }
+
+                            .t2 {
+                                font-size: 16px;
+                                margin-top: 10px;
+                            }
+
+                            .t3 {
+                                max-height: 100px;
+                                font-size: 12px;
+                                margin-top: 18px;
+                                text-align: left;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 6;
+                                -webkit-box-orient: vertical;
+                            }
+
+                            a {
+                                width: 100px;
+                                height: 30px;
+                                line-height: 30px;
+                                //background: red;
+                                display: block;
+                                position: absolute;
+                                bottom: 15px;
+                                left: 0;
+                                right: 0;
+                                margin:0 auto;
+                                //padding: 10px 3px;
+                                border-bottom: 1px solid #919191;
+                            }
+                        }
+
+                        .text-box{
+                            position: relative;
+                        }
+
+                    }
+                }
+            }
+
+            .alert {
+                display: none;
+                position: absolute;
+                left: 4%;
+                right: 0;
+                top: 0;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background: #FFF;
+                color: #000;
+                .box-shadow( 0,6px,20px,#5b5b5b);
+
+                .close {
+                    display: block;
+                    border-radius: 50%;
+                    background: #FFF;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 20px;
+                    color: #000;
+                    .box-shadow( 0,6px,20px,#5b5b5b);
+                    .absolute(auto,-17px,35px,35px);
+                    cursor: pointer;
+                    position: absolute;
+                    left: auto;
+                    top: -14px;
+                    width: 33px;
+                    height: 33px;
+                    right: -12px;
+                }
+                /*overflow-x:m;*/
+                .shadow {
+                    position: absolute;
+                    left: -12px;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                    border-radius: 10px;
+
+                    img {
+                        float: left;
+                        width: 50%;
+                        height: 100%;
+                    }
+
+                    .warp {
+                        margin-left: 50%;
+
+
+                        h2 {
+                            font-size:22px;
+                            margin:20px 0;
+                        }
+                        p{
+                            font-size:18px;
+                        }
+                        .main{
+                            .absoluteCenter();
+                            width:50%;
+                            left:50%;
+                            top:100px;
+                            font-size:14px;
+                            padding:20px;
+                            text-align:left;
+                            overflow:auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** 关于巨牛 ---> 人才理念**/
+.personnel-main {
+    .absolute(0,@navHeight,100%,auto);
+    text-align: center;
+    /*height:1500px;*/
+    /*position:relative;*/
+    padding-bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+        .top1 {
+            color: #FFF;
+            // height: 445px;
+            background: url("../img/bg-personnel1.png") no-repeat;
+            background-position: center center;
+            padding: 100px 0;
+            background-attachment: fixed;
+            background-size: cover;
+
+            .top-wrap {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    border-left: 2px solid #FFF;
+                    border-top: 2px solid #FFF;
+                    // border-top: 3px solid #717171;
+                    .absolute(0, auto, 10px, 10px);
+                    right: 0;
+                    bottom: -10px;
+                    margin: auto;
+                    .rotate(-135deg);
+                    cursor: pointer;
+                }
+            }
+
+            .top-content {
+                padding: 0 235px;
+                height: 135px;
+                overflow: hidden;
+                .transition(all,0.3s,linear);
+
+                h4 {
+                    font-size: 20px;
+                    // margin-top:110px;
+                    span {
+                        display: inline-block;
+                        font-size: 25px;
+                        color: #dd2025;
+                        margin-left: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-top: 25px;
+                    line-height: 35px;
+                    word-spacing: 8px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .top2 {
+            background: #fff;
+            /*min-height: 375px;*/
+            padding: 100px 0;
+            background-attachment: fixed;
+
+            .top-wrap {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    border-left: 2px solid #535353;
+                    border-top: 2px solid #535353;
+                    // border-top: 3px solid #717171;
+                    .absolute(0, auto, 10px, 10px);
+                    right: 0;
+                    bottom: -10px;
+                    margin: auto;
+                    .rotate(-135deg);
+                    cursor: pointer;
+                }
+            }
+
+            .top-content {
+                padding: 0 235px;
+                height: 135px;
+                overflow: hidden;
+                .transition(all,0.3s,linear);
+
+                h4 {
+                    font-size: 20px;
+                    // margin-top:110px;
+                    span {
+                        display: inline-block;
+                        font-size: 25px;
+                        color: #dd2025;
+                        margin-right: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-top: 25px;
+                    line-height: 35px;
+                    word-spacing: 8px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .top3 {
+            color: #fff;
+            background: url("../img/bg-personnel2.png") no-repeat;
+            background-position: center center;
+            /*min-height: 375px;*/
+            padding: 100px 0;
+            background-attachment: fixed;
+            background-size: cover;
+
+            .top-wrap {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    border-left: 2px solid #FFF;
+                    border-top: 2px solid #FFF;
+                    // border-top: 3px solid #717171;
+                    .absolute(0, auto, 10px, 10px);
+                    right: 0;
+                    bottom: -10px;
+                    margin: auto;
+                    .rotate(-135deg);
+                    cursor: pointer;
+                }
+            }
+
+            .top-content {
+                padding: 0 235px;
+                height: 135px;
+                overflow: hidden;
+                .transition(all,0.3s,linear);
+
+                h4 {
+                    font-size: 20px;
+                    // margin-top:110px;
+                    span {
+                        display: inline-block;
+                        font-size: 25px;
+                        color: #dd2025;
+                        margin-left: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-top: 25px;
+                    line-height: 35px;
+                    word-spacing: 8px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .top4 {
+            background: #fff;
+            /*min-height: 375px;*/
+            padding: 100px 0;
+            background-attachment: fixed;
+
+            .top-wrap {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    border-left: 2px solid #535353;
+                    border-top: 2px solid #535353;
+                    // border-top: 3px solid #717171;
+                    .absolute(0, auto, 10px, 10px);
+                    right: 0;
+                    bottom: -10px;
+                    margin: auto;
+                    .rotate(-135deg);
+                    cursor: pointer;
+                }
+            }
+
+            .top-content {
+                padding: 0 235px;
+                height: 135px;
+                overflow: hidden;
+                .transition(all,0.3s,linear);
+
+                h4 {
+                    font-size: 20px;
+                    // margin-top:110px;
+                    span {
+                        display: inline-block;
+                        font-size: 25px;
+                        color: #dd2025;
+                        margin-left: 10px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    margin-top: 25px;
+                    line-height: 35px;
+                    word-spacing: 8px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        background: #fff;
+        color: #000;
+    }
+}
+
+/** 关于巨牛 ---> 发展历程**/
+.development-main {
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1078-@navHeight;
+    background: url("../img/bg-course1.jpg") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+
+        .box {
+            //width: 740px;
+            height:800px;
+            /*border:1px solid #ccc;*/
+            margin: 100px auto 0;
+            position: relative;
+
+            .left-nav {
+                width: 110px;
+                height: 100%;
+                float: left;
+                margin-top: 35px;
+
+                li {
+                    cursor: pointer;
+                    margin-bottom: 50px;
+                }
+
+                .left-nav-li {
+                    p {
+                        color: #FFF;
+                        font-size: 32px;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+
+                    .line {
+                        width: 100%;
+                        height: 20px;
+                        border-top: 1px solid #FFF;
+                        border-right: 1px solid #FFF;
+                        .transition(all,0.2s,linear);
+                        position: relative;
+                        /** 向下箭头 **/
+                        &:after {
+                            content: "";
+                            display: block;
+                            border-top: 1px solid #FFF;
+                            border-right: 1px solid #FFF;
+                            .absolute(auto,auto,10px,10px);
+                            right: -6px;
+                            bottom: -5px;
+                            .rotate(135deg);
+                        }
+                    }
+                }
+
+                .left-nav-li-active {
+                    p {
+                        color: #ffbe00;
+                        font-style: italic;
+                    }
+
+                    .line {
+                        width: 100%;
+                        height: 85px;
+                        border-top: 1px solid #ffbe00;
+                        border-right: 1px solid #ffbe00;
+
+                        &:after {
+                            border-top: 1px solid #ffbe00;
+                            border-right: 1px solid #ffbe00;
+                        }
+                        /** 圆点  选中状态才会有，所以加到 active这个class里**/
+                        &:before {
+                            content: "";
+                            display: block;
+                            .absolute(auto,auto,5px,5px);
+                            right: -3px;
+                            bottom: 50%;
+                            border-radius: 50%;
+                            background: #ffbe00;
+                        }
+                    }
+                }
+            }
+
+            .right-main {
+                .absolute(auto,0,auto,auto);
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                float: right;
+                height: 80%;
+                width: 999px;
+                border-radius: 10px;
+                background: rgba(53,96,131,0.5);
+                overflow-x: hidden;
+                overflow-y: auto;
+                padding: 20px;
+                color: #f1f2f4;
+
+                h3 {
+                    font-size: 20px;
+                    color: #fff;
+                }
+
+                //p {
+                //    //color: #f1f2f4;
+                //    font-size: 14px;
+                //    margin-bottom: 10px;
+                //    letter-spacing: 3px;
+                //}
+            }
+        }
+    }
+}
+
+/** 巨牛业务 ---> 辉煌业绩 **/
+.achievement-main {
+    /*.absoluteCenter();
+    top: @navHeight;
+    background: blue;
+    text-align: left;
+    z-index: -2;
+    background: url("../img/bg-achievement.png") no-repeat;
+    background-size: cover;
+    background-position: center center;*/
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1078-@navHeight;
+    background: url("../img/bg-achievement.png") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+        margin-top: @twoNavHeight;
+        margin-bottom: 65px;
+
+        .box {
+            width: 760px;
+            margin: 0 auto;
+            color: #FFF;
+            position: relative;
+
+            h2 {
+                font-size: 24px;
+                margin: 30px 0;
+            }
+
+            li {
+                font-size: 16px;
+                height: 50px;
+                border-bottom: 1px solid #bcb8b8;
+                line-height: 50px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffbe00;
+                }
+            }
+
+            .active {
+                color: #ffbe00;
+            }
+            .alert {
+                display: none;
+                position: fixed;
+                left: 4%;
+                right: 0;
+                top: 42%;
+                margin: auto;
+                width: 627px;
+                padding: 15px 60px 45px 60px;
+                border-radius: 10px;
+                background: #FFF;
+                color: #000;
+                .box-shadow( 0,6px,20px,#5b5b5b);
+
+                .close {
+                    display: block;
+                    border-radius: 50%;
+                    background: #FFF;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 20px;
+                    color: #000;
+                    .box-shadow( 0,6px,20px,#5b5b5b);
+                    .absolute(auto,-17px,35px,35px);
+                    cursor: pointer;
+                    left: auto;
+                    top: -13px;
+                    width: 33px;
+                    height: 33px;
+                    right: -12px;
+                }
+                /*overflow-x:m;*/
+                .shadow {
+                    max-height: 200px;
+                    overflow-y: auto;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: 600;
+                        img{
+                            vertical-align: middle;
+                            width: 80px;
+                            height: 30px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    p {
+                        margin-top: 15px;
+                        text-align: left;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** 巨牛业务 ---> 核心业务 **/
+.core-main {
+    .absoluteCenter();
+    top: @navHeight;
+    bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+
+        .left-box {
+            .absolute(0,0,50%,100%);
+            background: url("../img/bg-core.png") no-repeat;
+            background-position: center center;
+            background-size: cover;
+            float: left;
+
+            h2 {
+                width: 110px;
+                height: 60px;
+                border-bottom: 5px solid #ffba00;
+                text-align: center;
+                line-height: 60px;
+                color: #FFF;
+                font-size: 25px;
+                .absoluteCenter();
+            }
+        }
+
+        .right-box {
+            .absolute(auto,0,50%,100%);
+            right: 0;
+            background: #dbdfe6;
+            overflow: auto;
+
+            img {
+                display: block;
+                height: 90px;
+                margin: 30px auto 0;
+            }
+
+            .right-box-text {
+                margin: 0 auto;
+                font-size: 15px;
+                text-indent: 30px;
+                letter-spacing: 5px;
+                line-height: 24px;
+                padding: 30px 50px 10px 50px;
+            }
+        }
+    }
+}
+
+/** 巨牛动态 ---> 巨牛关心 **/
+.cattlecare-main {
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1078-@navHeight;
+    background: url("../img/bg-achievement.png") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+        margin-top: @twoNavHeight;
+        margin-bottom: 65px;
+
+        .box {
+            width: 760px;
+            margin: 0 auto;
+            color: #FFF;
+            position: relative;
+
+            h2 {
+                font-size: 24px;
+                margin: 30px 0;
+            }
+
+            li {
+                font-size: 16px;
+                height: 50px;
+                border-bottom: 1px solid #FFF;
+                line-height: 50px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ffbe00;
+                }
+
+                span {
+                    float: right;
+                }
+            }
+
+            .active {
+                color: #ffbe00;
+            }
+
+            .alert {
+                display: none;
+                position: fixed;
+                left: 4%;
+                right: 0;
+                top: 25%;
+                margin: auto;
+                width: 627px;
+                padding: 15px 60px 45px 60px;
+                border-radius: 10px;
+                background: #FFF;
+                color: #000;
+                .box-shadow( 0,6px,20px,#5b5b5b);
+
+                .close {
+                    display: block;
+                    border-radius: 50%;
+                    background: #FFF;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 20px;
+                    color: #000;
+                    .box-shadow( 0,6px,20px,#5b5b5b);
+                    .absolute(auto,-17px,35px,35px);
+                    cursor: pointer;
+                    left: auto;
+                    top: -13px;
+                    width: 33px;
+                    height: 33px;
+                    right: -12px;
+                }
+                /*overflow-x:m;*/
+                .shadow {
+                    max-height: 350px;
+                    overflow-y: auto;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        margin-top: 15px;
+                        text-align: left;
+                        font-size: 15px;
+                        display: block;
+                        vertical-align: middle;
+                    }
+                    img{
+                        margin: 0 auto;
+                        display: block;
+                        max-width: 100%;
+                        max-height: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** 巨牛动态 ---> 关心巨牛 **/
+.carecattle-main {
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1078-@navHeight;
+    background: url("../img/bg-achievement.png") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding-bottom: @footerHeight;
+    z-index: -2;
+
+    .content {
+        margin-top: @twoNavHeight;
+        margin-bottom: 65px;
+
+        .box {
+            width: 760px;
+            margin: 0 auto;
+            color: #FFF;
+            position: relative;
+
+            .list {
+                > li {
+                    h3 {
+                        display: block;
+                        font-size: 16px;
+                        height: 50px;
+                        border-bottom: 1px solid #FFF;
+                        line-height: 50px;
+                        cursor: pointer;
+                        margin-bottom: 15px;
+
+                        &:hover {
+                            color: #ffbe00;
+                        }
+                    }
+                    .aa{
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                    }
+
+                    ol {
+                        overflow: hidden;
+                        height: 0;
+
+                        li {
+                            display: block;
+                            font-size: 16px;
+                            height: 40px;
+                            border-bottom: 1px solid #FFF;
+                            line-height: 40px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            padding: 0 10px;
+
+                            &:hover {
+                                color: #ffbe00;
+                            }
+
+                            h4 {
+                                float: left;
+                            }
+
+                            .date {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .active {
+                color: #ffbe00;
+            }
+
+            .alert {
+                display: none;
+                position: fixed;
+                left: 4%;
+                right: 0;
+                top: 30%;
+                margin: auto;
+                width: 627px;
+                padding: 15px 60px 45px 60px;
+                border-radius: 10px;
+                background: #FFF;
+                color: #000;
+                .box-shadow( 0,6px,20px,#5b5b5b);
+                /*overflow-x:m;*/
+                .close {
+                    display: block;
+                    border-radius: 50%;
+                    background: #FFF;
+                    text-align: center;
+                    line-height: 35px;
+                    font-size: 20px;
+                    color: #000;
+                    .box-shadow( 0,6px,20px,#5b5b5b);
+                    .absolute(auto,-17px,35px,35px);
+                    cursor: pointer;
+                    left: auto;
+                    top: -13px;
+                    width: 33px;
+                    height: 33px;
+                    right: -12px;
+                }
+
+                .shadow {
+                    max-height: 350px;
+                    overflow-y: auto;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                    img{
+                        margin: 0 auto;
+                        max-width: 100%;
+                        display: block;
+                        max-height: 250px;
+                    }
+                    p {
+                        margin-top: 15px;
+                        text-align: left;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** 联系我们 **/
+.contact-main {
+    .absolute(0,@navHeight,100%,auto);
+    min-height: 1078-@navHeight;
+    .absoluteCenter();
+    top: @navHeight;
+    z-index: -2;
+
+
+    .content {
+        margin-top: @twoNavHeight+220px;
+
+        .box {
+            width: 750px;
+            height: 325px;
+            margin: 0 auto;
+            position: relative;
+
+            .left {
+                width: 50%;
+                float: left;
+
+                li {
+                    margin-bottom: 10px;
+                    overflow: hidden;
+
+                    h3 {
+                        font-size: 20px;
+                        color: #afafaf;
+                        margin: 10px 0;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin: 5px 0;
+                    }
+                }
+            }
+
+            .right {
+                .absolute(50%,auto,50%,100%);
+            }
+        }
+    }
+    //重写导航样式
+    .footer {
+        background: #FFF;
+        border-top: 1px solid #ccc;
+        color: #a3a3a3;
+        line-height: 22px;
+        padding: 10px 0;
+        height: auto;
+    }
+}
+
+/** 底部版权文字 **/
+
+.footer {
+    background: rgba(0,0,0,0.3);
+    .absolute(0,auto,100%,@footerHeight);
+    bottom: 0;
+    text-align: center;
+    line-height: @footerHeight;
+    color: #FFF;
+    z-index: 999;
+}

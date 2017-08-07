@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="90be3b58-1b8d-4912-acdd-acb3ab3bae2b" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>alert</find>
+      <find>devDependencies</find>
+      <find>scripts</find>
+      <find>关心巨牛</find>
+      <find>巨牛关心</find>
+      <find>right-box</find>
+      <find>shadow</find>
+      <find>.shadow</find>
+      <find>辉煌</find>
+      <find>development-main</find>
+      <find>公司介绍</find>
+      <find>achievement-main</find>
+      <find>team-main</find>
+      <find>carecattle-main</find>
+      <find>right-main</find>
+      <find>absoluteCenter</find>
+      <find>jpeg</find>
+      <find>top3</find>
+      <find>.alert</find>
+      <find>swiper-slide</find>
+      <find>home-main</find>
+      <find>.footer</find>
+      <find>.t3</find>
+      <find>.header</find>
+      <find>home-1</find>
+      <find>团队介绍</find>
+      <find>.box</find>
+      <find>click</find>
+      <find>fadeInDown</find>
+      <find>192.168.199.221</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>localhost</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/天气预报ajax调用三种方法/index2.html" />
+        <option value="$PROJECT_DIR$/1.json" />
+        <option value="$PROJECT_DIR$/Development1.html" />
+        <option value="$PROJECT_DIR$/personnel1.html" />
+        <option value="$PROJECT_DIR$/12.html" />
+        <option value="$PROJECT_DIR$/cattlecare1.html" />
+        <option value="$PROJECT_DIR$/carecattle2.html" />
+        <option value="$PROJECT_DIR$/下拉显示布局.html" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/team1.html" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/78.html" />
+        <option value="$PROJECT_DIR$/自定义更改滚动条.html" />
+        <option value="$PROJECT_DIR$/222.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/personnel.html" />
+        <option value="$PROJECT_DIR$/personnel1.html" />
+        <option value="$PROJECT_DIR$/carecattle1.html" />
+        <option value="$PROJECT_DIR$/carecattle1.html" />
+        <option value="$PROJECT_DIR$/personnel2.html" />
+        <option value="$PROJECT_DIR$/css/css.css" />
+        <option value="$PROJECT_DIR$/轮播图/index.html" />
+        <option value="$PROJECT_DIR$/brief.html" />
+        <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/css/css.less" />
+        <option value="$PROJECT_DIR$/js/nav.js" />
+        <option value="$PROJECT_DIR$/achievement.html" />
+        <option value="$PROJECT_DIR$/brief.html" />
+        <option value="$PROJECT_DIR$/carecattle.html" />
+        <option value="$PROJECT_DIR$/contact.html" />
+        <option value="$PROJECT_DIR$/cattlecare.html" />
+        <option value="$PROJECT_DIR$/core.html" />
+        <option value="$PROJECT_DIR$/Development.html" />
+        <option value="$PROJECT_DIR$/personnel.html" />
+        <option value="$PROJECT_DIR$/team.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="256" />
+    <option name="y" value="67" />
+    <option name="width" value="582" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hugecattle7.31完成版1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugecattle7.31完成版1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hugecattle7.31完成版1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hugecattle7.31完成版1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../huifaShop" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\项目\巨牛\hugecattle开发更新" />
+      <recent name="E:\项目\巨牛\hugecattle开发更新\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\项目\巨牛\hugecattle7.28完成版\轮播图" />
+      <recent name="E:\项目\巨牛\hugecattle7.28完成版\img" />
+      <recent name="E:\项目\巨牛\hugecattle\img" />
+      <recent name="E:\项目\巨牛\hugecattle" />
+      <recent name="E:\项目\巨牛\hugecattle\node_modules" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90be3b58-1b8d-4912-acdd-acb3ab3bae2b" name="Default" comment="" />
+      <created>1500864609352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1500864609352</updated>
+      <workItem from="1500864616216" duration="1606000" />
+      <workItem from="1500875272814" duration="1000" />
+      <workItem from="1500875455013" duration="17724000" />
+      <workItem from="1500945053455" duration="28067000" />
+      <workItem from="1501033184415" duration="616000" />
+      <workItem from="1501039530428" duration="20394000" />
+      <workItem from="1501065454053" duration="500000" />
+      <workItem from="1501117501609" duration="28469000" />
+      <workItem from="1501204457042" duration="20894000" />
+      <workItem from="1501234828865" duration="2232000" />
+      <workItem from="1501237507312" duration="2244000" />
+      <workItem from="1501463443707" duration="4130000" />
+      <workItem from="1501468268397" duration="4979000" />
+      <workItem from="1501479646571" duration="7380000" />
+      <workItem from="1501487838723" duration="955000" />
+      <workItem from="1501493576179" duration="59000" />
+      <workItem from="1501496950898" duration="211000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="140461000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15555556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/css111.less" />
+    <entry file="file://$PROJECT_DIR$/12.html" />
+    <entry file="file://$PROJECT_DIR$/carecattle.html" />
+    <entry file="file://$PROJECT_DIR$/carecattle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5089">
+          <caret line="213" column="45" lean-forward="true" selection-start-line="213" selection-start-column="45" selection-end-line="213" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cattlecare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="104" column="28" lean-forward="true" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compilerconfig.json.defaults" />
+    <entry file="file://$PROJECT_DIR$/compilerconfig.json" />
+    <entry file="file://$PROJECT_DIR$/img/banner2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/下拉显示布局.html" />
+    <entry file="file://$PROJECT_DIR$/一屏幕显示布局.html" />
+    <entry file="file://$PROJECT_DIR$/js/index.js" />
+    <entry file="file://$PROJECT_DIR$/css/animate.css" />
+    <entry file="file://$PROJECT_DIR$/css/animate.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.html" />
+    <entry file="file://$PROJECT_DIR$/js/handlebars-v4.0.10.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/team1.html" />
+    <entry file="file://$PROJECT_DIR$/test.html" />
+    <entry file="file://$PROJECT_DIR$/question.html" />
+    <entry file="file://$PROJECT_DIR$/222.html" />
+    <entry file="file://$PROJECT_DIR$/npm-debug.log" />
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/.babelrc" />
+    <entry file="file://$PROJECT_DIR$/node_modules/personnel22.html" />
+    <entry file="file://$PROJECT_DIR$/78.html" />
+    <entry file="file://$PROJECT_DIR$/自定义更改滚动条.html" />
+    <entry file="file://$PROJECT_DIR$/personnel1.html" />
+    <entry file="file://$PROJECT_DIR$/personnel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="68" column="50" lean-forward="true" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carecattle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/bg-introduce1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="825" column="20" lean-forward="true" selection-start-line="825" selection-start-column="20" selection-end-line="825" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/swiper.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/轮播图/swiper-3.4.2.min.js" />
+    <entry file="file://$PROJECT_DIR$/轮播图/jquery.min.js" />
+    <entry file="file://$PROJECT_DIR$/轮播图/swiper-3.4.2.min.css" />
+    <entry file="file://$PROJECT_DIR$/轮播图/banner1.jpg" />
+    <entry file="file://$PROJECT_DIR$/轮播图/index.html" />
+    <entry file="file://$PROJECT_DIR$/img/home-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/js/nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding>
+            <marker date="1501493603455" expanded="true" signature="85:2373" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="124:247" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="290:356" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="394:2350" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="423:2323" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="465:561" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="603:1197" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="729:1163" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="784:1124" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1230:1676" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1356:1642" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1411:1603" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1709:2160" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1835:2126" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="1890:2087" ph="..." />
+            <marker date="1501493603455" expanded="true" signature="2193:2293" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../huifaShop/html/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/css.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="466" column="37" lean-forward="false" selection-start-line="466" selection-start-column="37" selection-end-line="466" selection-end-column="37" />
+          <folding>
+            <element signature="e#177#365#0" expanded="false" />
+            <element signature="e#399#602#0" expanded="false" />
+            <element signature="e#618#786#0" expanded="false" />
+            <element signature="e#806#905#0" expanded="false" />
+            <element signature="e#930#1015#0" expanded="false" />
+            <element signature="e#1031#1108#0" expanded="false" />
+            <element signature="e#1125#1154#0" expanded="false" />
+            <element signature="e#1168#1283#0" expanded="false" />
+            <element signature="e#1720#2057#0" expanded="false" />
+            <element signature="e#7584#7736#0" expanded="false" />
+            <element signature="e#12054#18695#0" expanded="false" />
+            <element signature="e#18737#22396#0" expanded="false" />
+            <element signature="e#19498#19685#0" expanded="false" />
+            <element signature="e#21609#22378#0" expanded="false" />
+            <element signature="e#25439#26650#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/achievement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/brief.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carecattle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="45" column="40" lean-forward="false" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <marker date="1501497163986" expanded="true" signature="1785:1907" ph="..." />
+            <marker date="1501497163986" expanded="true" signature="3556:3723" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cattlecare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+          <folding>
+            <marker date="1501497163721" expanded="true" signature="1170:1352" ph="..." />
+            <marker date="1501497163721" expanded="true" signature="1381:1574" ph="..." />
+            <marker date="1501497163721" expanded="true" signature="1603:1783" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Development.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+          <folding>
+            <marker date="1501497163924" expanded="true" signature="1778:1894" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personnel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+          <folding>
+            <marker date="1501497164017" expanded="true" signature="1111:1250" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1151:1243" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1185:1232" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1283:1424" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1323:1417" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1357:1406" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1457:1597" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1497:1590" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1531:1579" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1630:1770" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1670:1763" ph="..." />
+            <marker date="1501497164017" expanded="true" signature="1704:1752" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <marker date="1501497163877" expanded="true" signature="1688:2226" ph="..." />
+            <marker date="1501497163877" expanded="true" signature="1718:2200" ph="..." />
+            <marker date="1501497163877" expanded="true" signature="1850:2169" ph="..." />
+            <marker date="1501497163877" expanded="true" signature="2827:3051" ph="..." />
+            <marker date="1501497163877" expanded="true" signature="4009:4233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

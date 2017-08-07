@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发展历程</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <script src="./js/jquery.min.js"></script>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 导航容器 -->
+    <div class="header"></div>
+    <script src="./js/nav.js"></script>
+    <!--主体内容-->
+    <div class="development-main">
+        <div class="content content-1200">
+            <div class="box clear-both">
+                <!--左侧年份-->
+                <div class="left-nav">
+                    <ul class="nav">
+                    </ul>
+                </div>
+                <!--右侧内容区-->
+                <div class="right-main">
+                </div>
+            </div>
+        </div>
+        <!--底部版权-->
+        <div class="footer">
+            巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+        </div>
+    </div>
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        ;(function ($) {
+            $.ajax({
+                url:'http://localhost:8080/JuNiu/getHistory.do',
+                type:'GET',
+                datatype:'json',
+                success:function (data) {
+                    var data=JSON.parse(data);
+                    if(data.result=='success'){
+                        var obj1=data.data
+                        console.log(obj1)
+                        var str='';
+                        for(var i=0;i<obj1.length;i++){
+                            str+=`<li class="left-nav-li" data-id=${i}>
+                    <p>${obj1[i].h_year}</p>
+                    <div class="line"></div>
+                    </li>`
+                        }
+                        $('.left-nav .nav').html(str);
+                        //获取到主体内容
+                        var pageMain = $(".development-main");
+                        //获取到主题内容的右边的框
+                        var rightMain = pageMain.find(".right-main");
+                        //初始化默认选中
+                        pageMain.find(".left-nav li").eq(0).addClass("left-nav-li-active")
+                        //初始化滚动条插件
+                        rightMain.html('<p>'+obj1[0].h_desc+'</p>').mCustomScrollbar({
+                            set_height: "85%",
+                            mouseWheel: true
+                        });
+                        //点击事件(点击左边出现右边对应内容)
+                        pageMain.find(".left-nav li").click(function () {
+                            var $this=$(this);
+                            var index=$this.attr("data-id");
+                            $.each(pageMain.find(".left-nav li"), function (index, item) {
+                                $(item).removeClass("left-nav-li-active");
+                            });
+                            $(this).addClass("left-nav-li-active");
+
+                            //这里写入内容后，重新初始化滚动条插件
+                            rightMain.html('<p>'+obj1[index].h_desc+'</p>').mCustomScrollbar({
+                                set_height: "85%",
+                                mouseWheel: true
+                            });
+                        });
+                    }else {
+                        alert(data.errorMsg)
+                    }
+
+                },
+                error:function () {
+                    alert('服务器繁忙')
+                }
+            })
+        })(jQuery)
+
+    </script>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

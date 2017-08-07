@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>团队介绍</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!--<link href="css/animate.min.css" rel="stylesheet"/>-->
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/handlebars-v4.0.10.js"></script>
+
+</head>
+<body>
+<!-- 导航容器 -->
+<div class="header"></div>
+<script src="./js/nav.js"></script>
+<!--主体内容-->
+<div class="team-main">
+    <div class="content content-1200">
+
+        <div class="box">
+            <ul class="clear-both">
+            </ul>
+
+            <!--弹窗中的内容-->
+            <div class="alert animated">
+                <span class="close">╳</span>
+                <div class="shadow">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--底部版权-->
+    <div class="footer">
+        巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+    </div>
+</div>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+
+    $(function () {
+        $.ajax({
+            url: 'http://localhost:8080/JuNiu/queryAllTeam.do',
+            type: 'GET',
+            datatype: 'json',
+            success: function (data) {
+
+                var data = JSON.parse(data)
+                if (data.result == 'success') {
+                    var obj1 = data.data;
+                    console.log(obj1)
+                    var str = ''
+                    for (var i = 0; i < 4; i++) {
+                        str += `<li>
+                        <div>
+                            <img src=${obj1[i].te_img} alt="" class="user-head">
+                            <div class="text-box">
+                                <p class="t1">${obj1[i].te_post}</p>
+                                <p class="t2">${obj1[i].te_name}</p>
+                                <p class="t3">${obj1[i].te_desc}</p>
+                                <a href="javascript:;" data-id=${i}>查看更多</a>
+                            </div>
+                        </div>
+                    </li>`;
+//                            数据渲染到页面
+                        $('.box ul').html(str);
+//                            获取到弹出框
+                        var $alert = $(".alert");
+//                              点击事件
+                        $(".box>ul").find("a").click(function () {
+                            var $this = $(this);
+                            var index = $this.attr("data-id");
+                            console.log(index)
+                            var str2 = ''
+                            str2 += `<img src=${obj1[index].te_img} alt="" />
+                        <div class="warp">
+                            <h2>${obj1[index].te_post}</h2>
+                            <p>${obj1[index].te_name}</p>
+                            <div class="main">${obj1[index].te_desc}</div>
+                        </div>`;
+//                                添加到页面
+                            $('.shadow').html(str2);
+
+                            //获取到数据id
+                            var dataId = $(this).attr("data-id");
+
+                            //通过数据id找到数据
+                            var data = $(dataId).html();
+
+                            //渲染数据并初始化滚动条插件
+                            $alert.show().find(".main").html(data).mCustomScrollbar({
+                                set_height: "85%",
+                                mouseWheel: true
+                            });
+
+                        });
+                        $(".box>ul").find(".user-head").click(function () {
+                            var index=$(this).parent().find('a').attr('data-id')
+                            console.log(index)
+                            var str2 = ''
+                            str2 += `<img src=${obj1[index].te_img} alt="" />
+                        <div class="warp">
+                            <h2>${obj1[index].te_post}</h2>
+                            <p>${obj1[index].te_name}</p>
+                            <div class="main">${obj1[index].te_desc}</div>
+                        </div>`;
+//                                添加到页面
+                            $('.shadow').html(str2);
+
+                            //获取到数据id
+                            var dataId = $(this).attr("data-id");
+
+                            //通过数据id找到数据
+                            var data = $(dataId).html();
+
+                            //渲染数据并初始化滚动条插件
+                            $alert.show().find(".main").html(data).mCustomScrollbar({
+                                set_height: "85%",
+                                mouseWheel: true
+                            });
+
+                        });
+
+                        $alert.find("span").on("click", function () {
+                            $alert.hide();
+                        })
+                    }
+                } else {
+                    alert(data.errorMsg)
+                }
+            },
+            error: function () {
+                alert('服务器繁忙')
+            }
+        })
+    });
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 导航容器 -->
+<div class="header"></div>
+<script src="./js/nav.js"></script>
+
+<!--主体内容-->
+<div class="contact-main">
+    <div class="content content-1200">
+        <div class="box">
+            <div class="left">
+                <ul>
+                </ul>
+            </div>
+            <div class="right" id="allmap"></div>
+        </div>
+    </div>
+    <!--底部版权-->
+    <div class="footer">
+        巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>粤公网安备号44010402000169号
+    </div>
+</div>
+
+<script>
+
+    $.ajax({
+        url: 'http://localhost:8080/JuNiu/queryAllInfo.do',
+        type: 'GET',
+        datatype: 'json',
+        success: function (data) {
+            var data = JSON.parse(data);
+            if (data.result == 'success') {
+                var data = data.data;
+                var str = `<li>
+                            <h3>电话联系</h3>
+                            <p>电话：${data.i_telephone}</p>
+                            <p>传真：${data.i_fax}</p>
+                        </li>
+                        <li>
+                            <h3>邮箱联系</h3>
+                            <p>hr邮箱:${data.i_hr_mail}</p>
+                            <p>公司邮箱:${data.i_company_mail}</p>
+                        </li>
+                        <li>
+                            <h3>公司地址</h3>
+                            <p>邮编${data.i_code}</p>
+                            <p>地址：${data.i_address}</p>
+                        </li>`
+                $('.left ul').html(str)
+
+            } else {
+                alert(data.errorMsg)
+            }
+        },
+        error: function () {
+            alert('服务器繁忙')
+        }
+    })
+
+    ;(function (w) {
+        //百度地图API功能
+        function loadJScript() {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://api.map.baidu.com/api?v=2.0&ak=djFBu4vgBKRGXP4z4KDYiGxRdz0sF5CL&callback=init";
+            document.body.appendChild(script);
+
+        }
+
+        w.init = init;
+
+        function init() {
+            var map = new BMap.Map("allmap");            // 创建Map实例
+            var point = new BMap.Point(116.487706, 40.001502); // 创建点坐标
+            map.centerAndZoom(point, 15);
+            map.enableScrollWheelZoom();                 //启用滚轮放大缩小
+            map.centerAndZoom(point, 12);
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            marker.addEventListener("click", getAttr);
+
+            function getAttr() {
+                var p = marker.getPosition();       //获取marker的位置
+                alert("marker的位置是" + p.lng + "," + p.lat);
+            }
+        }
+
+        w.onload = loadJScript;  //异步加载地图
+    })(window);
+
+</script>
+</body>
+
+</html>

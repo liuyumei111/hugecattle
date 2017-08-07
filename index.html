@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航容器 -->
+    <div class="header"></div>
+    <script src="./js/nav.js"></script>
+
+    <!--主体内容-->
+    <div class="home-main">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide a"></div>
+                <div class="swiper-slide b"></div>
+                <div class="swiper-slide c"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!--底部版权-->
+        <div class="footer">
+            巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+        </div>
+        
+        <div class="home-1">
+            <img src="./img/home-1.png" alt="">
+            <p>thick，good faith harmony and win-win</p>
+        </div>
+
+
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay:5000,
+            loop:true,
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 0
+        });
+    </script>
+
+</body>
+
+</html>

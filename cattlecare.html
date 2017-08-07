@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>巨牛关心</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="css/animate.min.css" rel="stylesheet"/>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 导航容器 -->
+<div class="header"></div>
+<script src="./js/nav.js"></script>
+<!--主体内容-->
+<div class="cattlecare-main">
+    <div class="content content-1200">
+        <div class="box">
+            <h2>行业新闻</h2>
+            <ul class="list"></ul>
+            <div class="alert animated fadeInDown">
+                <span class="close">╳</span>
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </div>
+    <!--底部版权-->
+    <div class="footer">
+        巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+    </div>
+</div>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    ;(function ($) {
+        $(function () {
+            $.ajax({
+                url: 'http://localhost:8080/JuNiu/queryAllNews.do',
+                type: 'GET',
+                datatype: 'json',
+                success: function (data) {
+                    var data = JSON.parse(data);
+                    console.log(data)
+                    if (data.result == 'success') {
+                        var obj1 = data.data;
+                        var str = '';
+                        for (var i = 0; i < obj1.length; i++) {
+                            var a=i+1
+                            a=a+'.'
+                            str += `<li data-index=${i}>${a}${obj1[i].n_name}<span class="data">${obj1[i].n_time}</span></li>`
+                        }
+                        $list = $('.list').html(str);
+
+                        //点击li打开新闻弹窗
+                        var $listLi = $list.find("li");
+                        $listLi.click(function () {
+                            //获取用户点击的哪条新闻
+                            var index = $(this).attr("data-index");
+                            /** 点击li时添加class 改变颜色 **/
+                            $.each($listLi, function (index, item) {
+                                $(item).removeClass("active");
+                            })
+                            $(this).addClass("active");
+                            //弹窗模板
+                            var html = "";
+                            if(obj1[index].n_img){
+                                var oImg = new Image();
+                                oImg.onload = function () {
+                                    console.log("图片加载完毕了")
+                                        html = `<h3>${obj1[index].n_name}</h3>
+                                                <img src=${obj1[index].n_img} alt="">
+                                                <p>${obj1[index].n_desc}</p>`;
+                                        //添加弹窗数据元素 以及 初始化滚动条插件
+                                        $('.alert').show().find(".shadow").html(html).mCustomScrollbar({
+                                            set_height: "85%",
+                                            mouseWheel: true
+                                        });
+                                }
+                                oImg.src = obj1[index].n_img;
+
+                            }else {
+                                    html = `<h3>${obj1[index].n_name}</h3><p>${obj1[index].n_desc}</p>`;
+                                    //添加弹窗数据元素 以及 初始化滚动条插件
+                                    $('.alert').show().find(".shadow").html(html).mCustomScrollbar({
+                                        set_height: "85%",
+                                        mouseWheel: true
+                                    });
+                            }
+
+
+                        });
+
+                        /** 点击X删除元素 **/
+                        $('.alert').find("span").on("click", function () {
+                            $('.alert').hide();
+                            $('.alert').find(".shadow").html("");
+                        })
+
+                    } else {
+                        alert(data.errorMsg)
+                    }
+                },
+                error: function () {
+                    alert('服务器繁忙')
+                }
+            });
+        })
+    })(jQuery);
+
+</script>
+</body>
+
+</html>

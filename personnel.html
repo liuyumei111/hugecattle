@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人才理念</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 导航容器 -->
+<div class="header"></div>
+<script src="./js/nav.js"></script>
+<!--主体内容-->
+<div class="personnel-main">
+    <div class="content">
+    </div>
+    <!--底部版权-->
+    <div class="footer">
+        巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+    </div>
+</div>
+<script>
+    ;(function ($) {
+        $.ajax({
+            url: 'http://localhost:8080/JuNiu/queryAllTalent.do',
+            type: 'GET',
+            datatype: 'json',
+            success: function (data) {
+                var data = JSON.parse(data);
+                console.log(data)
+                if (data.result == 'success') {
+                    var obj1 = data.data
+                    var str = ''
+                    str += `<div class="top1 minWidth-1200">
+    <div class="top-wrap content-1200">
+        <div class="top-content">
+           ${obj1.t_first_desc}
+        </div>
+    </div>
+</div>
+<div class="top2 minWidth-1200">
+    <div class="top-wrap content-1200">
+        <div class="top-content">
+            ${obj1.t_second_desc}
+        </div>
+    </div>
+</div>
+<div class="top3 minWidth-1200">
+    <div class="top-wrap content-1200">
+        <div class="top-content">
+            ${obj1.t_third_desc}
+        </div>
+    </div>
+</div>
+<div class="top4 minWidth-1200">
+    <div class="top-wrap content-1200">
+        <div class="top-content">
+            ${obj1.t_forth_desc}
+        </div>
+    </div>
+</div>`;
+                    $('.content').html(str)
+                    $(".top-wrap").on("click", function () {
+                        if (this.flag) {
+                            $(this).find(".top-content").height(135);
+                        } else {
+                            $(this).find(".top-content").height(300);
+                        }
+                        this.flag = !this.flag;
+                    })
+
+                } else {
+                    alert(data.errorMsg)
+                }
+            },
+            error: function () {
+                alert('服务器繁忙')
+            }
+
+        });
+
+
+    })(jQuery);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关心巨牛</title>
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="css/animate.min.css" rel="stylesheet"/>
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 导航容器 -->
+<div class="header"></div>
+<script src="./js/nav.js"></script>
+
+<!--主体内容-->
+<div class="carecattle-main">
+
+    <div class="content content-1200">
+        <div class="box">
+            <ul class="list">
+            </ul>
+            <div class="alert animated fadeInDown">
+                <span class="close">╳</span>
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--底部版权-->
+    <div class="footer">
+        巨牛（北京）投资有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备102152884号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤公网安备号44010402000169号
+    </div>
+</div>
+
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    $(function () {
+
+        $.ajax({
+            url: 'http://localhost:8080/JuNiu/getAllCare.do',
+            type: 'GET',
+            datatype: 'json',
+            success: function (data) {
+                var data = JSON.parse(data)
+                console.log(data);
+                if (data.result == 'success') {
+                    var data = data.data;
+                    if (data instanceof Array) {
+                        //渲染第一层新闻数据
+                        for (var i = 0; i < data.length; i++) {
+                            var a=i+1
+                            a=a+'.'
+                            //1.创建一级列表标题
+                            var html = `<li>
+                                                <h3>${a}${data[i].name}</h3>
+                                       </li>`;
+                            var oLi = $(html);
+
+                            //2.渲染二级列表数据  render函数返回一个渲染好的ol dom元素。
+                            var olList = render(data[i].li);
+//                            把二级菜单列表数据放入到一级标题里面
+                            $(oLi).append(olList);
+//                            把一级菜单放入到大容器中
+                            $(".list").append(oLi);
+
+                            $(oLi).on('click', function (e) {
+                                e.stopPropagation();
+                                if (this.a) {
+                                    $(this).find("ol").height("0");
+                                    $(this).find("div.aa").height("0");
+
+                                } else {
+                                    $(this).find('ol').height('120px');
+                                    $(this).find('div.aa').height('120px');
+                                    $(this).find("ol").css('overflow','visible');
+                                }
+                                this.a = !this.a
+                            })
+                        }
+                    }
+                } else {
+                    alert(data.errorMsg)
+                }
+            },
+            error: function () {
+                alert('服务器繁忙')
+            }
+        });
+
+        function render(typeData, callback) {
+
+            //创建一个ol容器
+            var $div= $("<div></div>");
+            $div.addClass('aa')
+            var $ol = $("<ol></ol>");
+            for (var i = 0, len = typeData.length; i < len; i++) {
+                (function (i) {
+                    //1.渲染二级标题列表
+                    var html = `<li>
+                        <h4>${i+1+'.'}${typeData[i].m_name}</h4>
+                        <span class="date">${typeData[i].m_time}</span>
+                        </li>`;
+                    var $oLi = $(html);
+
+                    //2.点击二级新闻列表项出现弹窗
+                    $oLi.on('click', function (e) {
+//                            阻止冒泡
+                        e.stopPropagation();
+//                            判断后台給没给图片路径
+                        if (typeData[i].m_img) {
+                            var oImg = new Image();
+                            oImg.onload = function () {
+                                console.log("图片加载完毕了")
+
+                                var html = `<h3>${typeData[i].m_name}</h3><img src=${typeData[i].m_img} alt=""><p>${typeData[i].m_desc}</p>`;
+
+                                $('.alert').show().find('.shadow').html(html).mCustomScrollbar({
+                                    set_height: "85%",
+                                    mouseWheel: true
+                                });
+
+                            };
+                            oImg.src = typeData[i].m_img
+                        } else {
+                            var html = `<h3>${typeData[i].m_name}</h3><p>${typeData[i].m_desc}</p>`;
+                            $('.alert').show().find('.shadow').html(html).mCustomScrollbar({
+                                set_height: "85%",
+                                mouseWheel: true
+                            });
+                        }
+
+                        $('.alert').show().find('.shadow').html(html).mCustomScrollbar({
+                            set_height: "85%",
+                            mouseWheel: true
+                        });
+                        //点击关闭进行的操作
+                        $('.close').click(function () {
+                            $('.alert').hide().find('.shadow').html('')
+                        });
+                    });
+
+                    //添加到容器中
+
+                    $div.append($ol.append($oLi))
+
+                })(i)
+
+            }
+            return $div;
+        }
+    });
+
+</script>
+</body>
+
+</html>
